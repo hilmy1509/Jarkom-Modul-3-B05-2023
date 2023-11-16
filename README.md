@@ -1,6 +1,7 @@
 # Jarkom-Modul-3-B05-2023
 
 ## No 1
+```
 echo 'zone "riegel.canyon.b05.com" {
     type master;
     file "/etc/bind/sites/riegel.canyon.b05.com";
@@ -65,3 +66,4 @@ echo 'options {
 }; ' >/etc/bind/named.conf.options
 
 service bind9 start
+```
