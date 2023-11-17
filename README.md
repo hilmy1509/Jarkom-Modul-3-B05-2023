@@ -1,5 +1,131 @@
 # Jarkom-Modul-3-B05-2023
 
+## Configuration
+
+### Aura
+```
+auto eth0
+iface eth0 inet dhcp
+
+auto eth1
+iface eth1 inet static
+	address 10.11.1.1
+	netmask 255.255.255.0
+
+auto eth2
+iface eth2 inet static
+	address 10.11.2.1
+	netmask 255.255.255.0
+
+auto eth3
+iface eth3 inet static
+	address 10.11.3.1
+	netmask 255.255.255.0
+
+auto eth4
+iface eth4 inet static
+	address 10.11.4.1
+	netmask 255.255.255.0
+```
+### Himmel
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.1.2
+	netmask 255.255.255.0
+	gateway 10.11.1.1
+```
+### Heiter
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.1.3
+	netmask 255.255.255.0
+	gateway 10.11.1.1
+```
+### Denken
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.2.2
+	netmask 255.255.255.0
+	gateway 10.11.2.1
+```
+### Eisen
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.2.3
+	netmask 255.255.255.0
+	gateway 10.11.2.1
+```
+### Frieren
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.4.4
+	netmask 255.255.255.0
+	gateway 10.11.4.1
+```
+### Flamme
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.4.5
+	netmask 255.255.255.0
+	gateway 10.11.4.1
+```
+### Fern
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.4.6
+	netmask 255.255.255.0
+	gateway 10.11.4.1
+```
+### Lawine
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.3.4
+	netmask 255.255.255.0
+	gateway 10.11.3.1
+```
+### Linie
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.3.5
+	netmask 255.255.255.0
+	gateway 10.11.3.1
+```
+### Lugner
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.3.6
+	netmask 255.255.255.0
+	gateway 10.11.3.1
+```
+### Sein, Stark, Revolte, dan Richter
+```
+auto eth0
+iface eth0 inet dhcp
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## No 1
 ```
 echo 'zone "riegel.canyon.b05.com" {
