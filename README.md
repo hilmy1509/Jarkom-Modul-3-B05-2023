@@ -59,30 +59,6 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.2.1
 ```
-### Frieren
-```
-auto eth0
-iface eth0 inet static
-	address 10.11.4.4
-	netmask 255.255.255.0
-	gateway 10.11.4.1
-```
-### Flamme
-```
-auto eth0
-iface eth0 inet static
-	address 10.11.4.5
-	netmask 255.255.255.0
-	gateway 10.11.4.1
-```
-### Fern
-```
-auto eth0
-iface eth0 inet static
-	address 10.11.4.6
-	netmask 255.255.255.0
-	gateway 10.11.4.1
-```
 ### Lawine
 ```
 auto eth0
@@ -106,6 +82,30 @@ iface eth0 inet static
 	address 10.11.3.6
 	netmask 255.255.255.0
 	gateway 10.11.3.1
+```
+### Frieren
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.4.4
+	netmask 255.255.255.0
+	gateway 10.11.4.1
+```
+### Flamme
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.4.5
+	netmask 255.255.255.0
+	gateway 10.11.4.1
+```
+### Fern
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.4.6
+	netmask 255.255.255.0
+	gateway 10.11.4.1
 ```
 ### Sein, Stark, Revolte, dan Richter
 ```
