@@ -194,6 +194,8 @@ apt-get install jq -y
 
 
 ## No 1
+Lakukan konfigurasi sesuai dengan peta yang sudah diberikan!
+
 ```
 echo 'zone "riegel.canyon.b05.com" {
     type master;
@@ -260,7 +262,114 @@ echo 'options {
 
 service bind9 start
 ```
+## NO 2
+Semua CLIENT harus menggunakan konfigurasi dari DHCP Server. Client yang melalui Switch3 mendapatkan range IP dari [prefix IP].3.16 - [prefix IP].3.32 dan [prefix IP].3.64 - [prefix IP].3.80
 
+### Script
+
+```
+echo 'subnet 10.11.1.0 netmask 255.255.255.0 {
+}
+
+subnet 10.11.2.0 netmask 255.255.255.0 {
+}
+
+subnet 10.11.3.0 netmask 255.255.255.0 {
+    range 10.11.3.16 10.11.3.32;
+    range 10.11.3.64 10.11.3.80;
+    option routers 10.11.3.0;
+}' > /etc/dhcp/dhcpd.conf
+```
+
+## NO 3
+Client yang melalui Switch4 mendapatkan range IP dari [prefix IP].4.12 - [prefix IP].4.20 dan [prefix IP].4.160 - [prefix IP].4.168.
+
+### Script
+```
+echo 'subnet 10.11.1.0 netmask 255.255.255.0 {
+}
+
+subnet 10.11.2.0 netmask 255.255.255.0 {
+}
+
+subnet 10.11.3.0 netmask 255.255.255.0 {
+    range 10.11.3.16 10.11.3.32;
+    range 10.11.3.64 10.11.3.80;
+    option routers 10.11.3.0;
+}
+
+subnet 10.11.4.0 netmask 255.255.255.0 {
+    range 10.11.4.12 10.11.4.20;
+    range 10.11.4.160 10.11.4.168;
+    option routers 10.11.4.0;
+} ' > /etc/dhcp/dhcpd.conf
+```
+
+## NO 4
+Client mendapatkan DNS dari Heiter dan dapat terhubung dengan internet melalui DNS tersebut
+
+### Script
+```
+subnet 10.11.3.0 netmask 255.255.255.0 {
+    ...
+    option broadcast-address 10.11.3.255;
+    option domain-name-servers 10.11.1.2;
+    ...
+}
+
+subnet 10.11.4.0 netmask 255.255.255.0 {
+    option broadcast-address 10.11.4.255;
+    option domain-name-servers 10.11.1.2;
+} 
+```
+lalu gunakan shell sebagai berikut
+```
+echo 'subnet 10.11.1.0 netmask 255.255.255.0 {
+}
+
+subnet 10.11.2.0 netmask 255.255.255.0 {
+}
+
+subnet 10.11.3.0 netmask 255.255.255.0 {
+    range 10.11.3.16 10.11.3.32;
+    range 10.11.3.64 10.11.3.80;
+    option routers 10.11.3.0;
+    option broadcast-address 10.11.3.255;
+    option domain-name-servers 10.11.1.2;
+}
+
+subnet 10.11.4.0 netmask 255.255.255.0 {
+    range 10.11.4.12 10.11.4.20;
+    range 10.11.4.160 10.11.4.168;
+    option routers 10.11.4.0;
+    option broadcast-address 10.11.4.255;
+    option domain-name-servers 10.11.1.2;
+} ' > /etc/dhcp/dhcpd.conf
+
+service isc-dhcp-server start
+```
+Setup pada Aura sebagai berikut
+```
+echo '# Defaults for isc-dhcp-relay initscript
+# sourced by /etc/init.d/isc-dhcp-relay
+# installed at /etc/default/isc-dhcp-relay by the maintainer scripts
+
+#
+#This is a POSIX shell fragment
+#
+
+# What servers should the DHCP relay forward requests to?
+SERVERS="192.173.1.1"
+
+# On what interfaces should the DHCP relay (dhrelay) serve DHCP requests?
+INTERFACES="eth1 eth2 eth3 eth4"
+
+# Additional options that are passed to the DHCP relay daemon?
+OPTIONS=""' > /etc/default/isc-dhcp-relay
+
+service isc-dhcp-relay start 
+```
+Lalu pada file '/etc/sysctl.conf' lakukan uncommented pada 'net.ipv4.ip_forward=1'
 ## NO 6
 ```
 wget -O '/var/www/granz.channel.b05.com' 'https://drive.google.com/u/0/uc?id=1ViSkRq7SmwZgdK64eRbr5Fm1EGCTPrU1&export=download'
