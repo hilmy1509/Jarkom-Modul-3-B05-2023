@@ -558,7 +558,6 @@ ab -n 200 -c 10 http://www.granz.channel.b05.com/
 ### Hasil
 #### Round Robin
 <img width="412" alt="Cuplikan layar 2023-11-19 210413" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/63d71a75-bd08-4a16-977d-4287628f54e5">
-
 	<img width="402" alt="Cuplikan layar 2023-11-19 210435" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/53823f09-9a76-4788-a3c6-33d0dbbd6838">
 
 #### Least Cont
