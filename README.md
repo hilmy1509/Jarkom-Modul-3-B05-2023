@@ -193,13 +193,6 @@ apt-get install jq -y
 ```
 
 
-
-
-
-
-
-
-
 ## No 1
 Lakukan konfigurasi sesuai dengan peta yang sudah diberikan!
 
@@ -476,7 +469,7 @@ echo 'server {
 service nginx restart
 ```
 ### Hasil
-
+<img width="539" alt="Cuplikan layar 2023-11-19 200456" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/163c2816-e297-4517-997b-d162fcc600b2">
 
 ## NO 7
 Kepala suku dari Bredt Region memberikan resource server sebagai berikut: Lawine, 4GB, 2vCPU, dan 80 GB SSD. Linie, 2GB, 2vCPU, dan 50 GB SSD. Lugner 1GB, 1vCPU, dan 25 GB SSD. Aturlah agar Eisen dapat bekerja dengan maksimal, lalu lakukan testing dengan 1000 request dan 100 request/second.
