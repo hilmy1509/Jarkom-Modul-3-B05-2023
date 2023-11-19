@@ -558,24 +558,21 @@ ab -n 200 -c 10 http://www.granz.channel.b05.com/
 ### Hasil
 #### Round Robin
 <img width="412" alt="Cuplikan layar 2023-11-19 210413" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/63d71a75-bd08-4a16-977d-4287628f54e5">
-	<img width="402" alt="Cuplikan layar 2023-11-19 210435" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/53823f09-9a76-4788-a3c6-33d0dbbd6838">
+<img width="402" alt="Cuplikan layar 2023-11-19 210435" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/53823f09-9a76-4788-a3c6-33d0dbbd6838">
 
 #### Least Cont
 <img width="409" alt="Cuplikan layar 2023-11-19 210512" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/845de39a-f67b-470c-887a-6767eab06dc7">
-
-	<img width="404" alt="Cuplikan layar 2023-11-19 210526" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/39cb3590-2f60-4c65-af20-861fc827fb49">
+<img width="404" alt="Cuplikan layar 2023-11-19 210526" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/39cb3590-2f60-4c65-af20-861fc827fb49">
 
 
 #### IP Hash
 <img width="410" alt="Cuplikan layar 2023-11-19 210547" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/ca191667-e70a-463b-9598-afd5dfac1709">
-
-	<img width="407" alt="Cuplikan layar 2023-11-19 210559" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/88ce2c6a-d373-45af-af59-d7feddb8397b">
+<img width="407" alt="Cuplikan layar 2023-11-19 210559" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/88ce2c6a-d373-45af-af59-d7feddb8397b">
 
 
 #### Generic Hash
 <img width="406" alt="Cuplikan layar 2023-11-19 210649" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/2a496e54-6fa8-4a46-b0ee-e6f0a5d8afa6">
-
-	<img width="407" alt="Cuplikan layar 2023-11-19 210704" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/0b6a4229-e1d4-46b6-8c2a-fa4243972841">
+<img width="407" alt="Cuplikan layar 2023-11-19 210704" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/0b6a4229-e1d4-46b6-8c2a-fa4243972841">
 
 ## NO 9
 Dengan menggunakan algoritma Round Robin, lakukan testing dengan menggunakan 3 worker, 2 worker, dan 1 worker sebanyak 100 request dengan 10 request/second, kemudian tambahkan grafiknya pada grimoire.
@@ -590,18 +587,15 @@ ab -n 100 -c 10 http://www.granz.channel.b05.com/
 
 #### 3 Worker
 <img width="407" alt="Cuplikan layar 2023-11-19 210749" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/4c7e0566-fe24-4895-9d20-8e116ca4d2fe">
-
-	<img width="406" alt="Cuplikan layar 2023-11-19 210800" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/21c03c54-f46e-47da-884e-e914c811254f">
+<img width="406" alt="Cuplikan layar 2023-11-19 210800" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/21c03c54-f46e-47da-884e-e914c811254f">
 
 #### 2 Worker
 <img width="400" alt="Cuplikan layar 2023-11-19 211404" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/17ea57c2-3052-4e70-a31e-0f136a80bcc8">
-
-	<img width="406" alt="Cuplikan layar 2023-11-19 211417" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/8f953864-5f4c-424d-a5a9-1bd9cef22616">
+<img width="406" alt="Cuplikan layar 2023-11-19 211417" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/8f953864-5f4c-424d-a5a9-1bd9cef22616">
 
 #### 1 Worker
 <img width="406" alt="Cuplikan layar 2023-11-19 211439" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/633111d2-3446-433b-910b-38db2edbaff5">
-
-	<img width="405" alt="Cuplikan layar 2023-11-19 211545" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/3fa10590-3298-4053-a496-5d6d73c1c1d2">
+<img width="405" alt="Cuplikan layar 2023-11-19 211545" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/3fa10590-3298-4053-a496-5d6d73c1c1d2">
 
 ## NO 10
 Selanjutnya coba tambahkan konfigurasi autentikasi di Load Balancer dengan dengan kombinasi username: “netics” dan password: “ajkyyy”, dengan yyy merupakan kode kelompok. Terakhir simpan file “htpasswd” nya di /etc/nginx/rahasisakita/.
@@ -647,9 +641,9 @@ service nginx restart
 
 ### Hasil
 <img width="409" alt="Cuplikan layar 2023-11-19 211635" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/a0581351-8153-4bd8-af20-e6a5ee25e431">
-	<img width="406" alt="Cuplikan layar 2023-11-19 211652" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/c8513144-7f3e-4ba0-a8de-c70d3638e73c">
-	<img width="409" alt="Cuplikan layar 2023-11-19 211706" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/848af814-ce0e-490f-bb21-d0e6fe7bd246">
-	<img width="409" alt="Cuplikan layar 2023-11-19 211719" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/277b1fa4-55bd-4aef-af4c-259ce9fbaef4">
+<img width="406" alt="Cuplikan layar 2023-11-19 211652" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/c8513144-7f3e-4ba0-a8de-c70d3638e73c">
+<img width="409" alt="Cuplikan layar 2023-11-19 211706" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/848af814-ce0e-490f-bb21-d0e6fe7bd246">
+<img width="409" alt="Cuplikan layar 2023-11-19 211719" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/277b1fa4-55bd-4aef-af4c-259ce9fbaef4">
 
 ## NO 11
 Lalu buat untuk setiap request yang mengandung /its akan di proxy passing menuju halaman https://www.its.ac.id. (11) hint: (proxy_pass).
@@ -797,8 +791,7 @@ FLUSH PRIVILEGES;
 ### Hasil
 #### Denken
 <img width="409" alt="Cuplikan layar 2023-11-19 211901" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/5c2047cf-5f43-414b-8740-f37f05abd0c6">
-
-	<img width="409" alt="Cuplikan layar 2023-11-19 211936" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/b0dc18da-3e76-4013-bd5c-0424f5d91e8e">
+<img width="409" alt="Cuplikan layar 2023-11-19 211936" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/b0dc18da-3e76-4013-bd5c-0424f5d91e8e">
 
 #### Fern
 <img width="408" alt="Cuplikan layar 2023-11-19 212043" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/d6179e74-ddfc-44e6-89a9-7c9f85f4d940">
@@ -984,8 +977,7 @@ ab -n 100 -c 10 -T 'application/json' -p register_data.json -g register_results2
 
 ### Hasil
 <img width="341" alt="Cuplikan layar 2023-11-19 212216" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/0539a8df-d0e4-4380-8813-63ddcb9a3f6d">
-
-	<img width="339" alt="Cuplikan layar 2023-11-19 212227" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/e34fa82f-532b-4982-813d-654bd43d9e2b">
+<img width="339" alt="Cuplikan layar 2023-11-19 212227" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/e34fa82f-532b-4982-813d-654bd43d9e2b">
 
 ## NO 16
 Granz Channel memiliki beberapa endpoint yang harus ditesting sebanyak 100 request dengan 10 request/second. Tambahkan response dan hasil testing pada grimoire. Untuk POST /api/auth/login.
