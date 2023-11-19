@@ -369,7 +369,7 @@ OPTIONS=""' > /etc/default/isc-dhcp-relay
 
 service isc-dhcp-relay start 
 ```
-Lalu pada file '/etc/sysctl.conf' lakukan uncommented pada 'net.ipv4.ip_forward=1'
+Lalu pada file `/etc/sysctl.conf` lakukan uncommented pada `net.ipv4.ip_forward=1`
 ## NO 6
 ```
 wget -O '/var/www/granz.channel.b05.com' 'https://drive.google.com/u/0/uc?id=1ViSkRq7SmwZgdK64eRbr5Fm1EGCTPrU1&export=download'
