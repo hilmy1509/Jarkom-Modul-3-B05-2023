@@ -2,7 +2,7 @@
 
 ## Configuration
 
-### Aura
+#### Aura
 ```
 auto eth0
 iface eth0 inet dhcp
@@ -27,7 +27,7 @@ iface eth4 inet static
 	address 10.11.4.1
 	netmask 255.255.255.0
 ```
-### Himmel
+#### Himmel
 ```
 auto eth0
 iface eth0 inet static
@@ -35,7 +35,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.1.1
 ```
-### Heiter
+#### Heiter
 ```
 auto eth0
 iface eth0 inet static
@@ -43,7 +43,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.1.1
 ```
-### Denken
+#### Denken
 ```
 auto eth0
 iface eth0 inet static
@@ -51,7 +51,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.2.1
 ```
-### Eisen
+#### Eisen
 ```
 auto eth0
 iface eth0 inet static
@@ -59,7 +59,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.2.1
 ```
-### Lawine
+#### Lawine
 ```
 auto eth0
 iface eth0 inet static
@@ -67,7 +67,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.3.1
 ```
-### Linie
+#### Linie
 ```
 auto eth0
 iface eth0 inet static
@@ -75,7 +75,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.3.1
 ```
-### Lugner
+#### Lugner
 ```
 auto eth0
 iface eth0 inet static
@@ -83,7 +83,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.3.1
 ```
-### Frieren
+#### Frieren
 ```
 auto eth0
 iface eth0 inet static
@@ -91,7 +91,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.4.1
 ```
-### Flamme
+#### Flamme
 ```
 auto eth0
 iface eth0 inet static
@@ -99,7 +99,7 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.4.1
 ```
-### Fern
+#### Fern
 ```
 auto eth0
 iface eth0 inet static
@@ -107,16 +107,83 @@ iface eth0 inet static
 	netmask 255.255.255.0
 	gateway 10.11.4.1
 ```
-### Sein, Stark, Revolte, dan Richter
+#### Sein, Stark, Revolte, dan Richter
 ```
 auto eth0
 iface eth0 inet dhcp
 ```
 
+Masukkan command-command berikut ke dalam setiap node menggunakan `.bashrc` menggunakan `nano`
+#### Heiter
+```
+echo 'nameserver 192.168.122.1' > /etc/resolv.conf
+apt-get update
+apt-get install bind9 -y
+```
+#### Himmel
+```
+echo 'nameserver 10.11.1.2' > /etc/resolv.conf   
+apt-get update
+apt install isc-dhcp-server -y
+```
+#### Aura
+```
+apt-get update
+apt install isc-dhcp-relay -y
+```
+#### Denken
+```
+echo 'nameserver 10.11.1.2' > /etc/resolv.conf
+apt-get update
+apt-get install mariadb-server -y
+service mysql start
+```
+#### Eisen
+```
+echo 'nameserver 10.11.1.2' > /etc/resolv.conf
+apt-get update
+apt-get install apache2-utils -y
+apt-get install nginx -y
+apt-get install lynx -y
 
+service nginx start
+```
+#### Lawine, Linie, dan Lugner
+```
+echo 'nameserver 10.11.1.2' > /etc/resolv.conf
+apt-get update
+apt-get install nginx -y
+apt-get install wget -y
+apt-get install unzip -y
+apt-get install lynx -y
+apt-get install htop -y
+apt-get install apache2-utils -y
+apt-get install php7.3-fpm php7.3-common php7.3-mysql php7.3-gmp php7.3-curl php7.3-intl php7.3-mbstring php7.3-xmlrpc php7.3-gd php7.3-xml php7.3-cli php7.3-zip -y
 
+service nginx start
+service php7.3-fpm start
+```
+#### Frieren, Flamme, dan Fern
+```
+echo 'nameserver 10.11.1.2' > /etc/resolv.conf
+apt-get update
+apt-get install lynx -y
+apt-get install mariadb-client -y
 
+apt-get install php8.0-mbstring php8.0-xml php8.0-cli   php8.0-common php8.0-intl php8.0-opcache php8.0-readline php8.0-mysql php8.0-fpm php8.0-curl unzip wget -y
+apt-get install nginx -y
 
+service nginx start
+service php8.0-fpm start
+```
+#### Sein, Stark, Revolte, dan Richter
+```
+apt update
+apt install lynx -y
+apt install htop -y
+apt install apache2-utils -y
+apt-get install jq -y
+```
 
 
 
