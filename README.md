@@ -196,6 +196,24 @@ apt-get install jq -y
 ## No 1
 Lakukan konfigurasi sesuai dengan peta yang sudah diberikan!
 
+### Lugner (PHP Worker)
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.3.1
+	netmask 255.255.255.0
+	gateway 10.11.3.0
+```
+### Fern (Laravel Worker)
+```
+auto eth0
+iface eth0 inet static
+	address 10.11.4.1
+	netmask 255.255.255.0
+	gateway 10.11.4.0
+```
+Selanjutnya pada DNS Server (Heiter), kita perlu menjalankan command dibawah ini
+### Script
 ```
 echo 'zone "riegel.canyon.b05.com" {
     type master;
