@@ -16,103 +16,103 @@ iface eth0 inet dhcp
 
 auto eth1
 iface eth1 inet static
-	address 10.11.1.1
+	address 10.11.1.0
 	netmask 255.255.255.0
 
 auto eth2
 iface eth2 inet static
-	address 10.11.2.1
+	address 10.11.2.0
 	netmask 255.255.255.0
 
 auto eth3
 iface eth3 inet static
-	address 10.11.3.1
+	address 10.11.3.0
 	netmask 255.255.255.0
 
 auto eth4
 iface eth4 inet static
-	address 10.11.4.1
+	address 10.11.4.0
 	netmask 255.255.255.0
 ```
 #### Himmel
 ```
 auto eth0
 iface eth0 inet static
-	address 10.11.1.2
+	address 10.11.1.1
 	netmask 255.255.255.0
-	gateway 10.11.1.1
+	gateway 10.11.1.0
 ```
 #### Heiter
 ```
 auto eth0
 iface eth0 inet static
-	address 10.11.1.3
+	address 10.11.1.2
 	netmask 255.255.255.0
-	gateway 10.11.1.1
+	gateway 10.11.1.0
 ```
 #### Denken
 ```
 auto eth0
 iface eth0 inet static
-	address 10.11.2.2
+	address 10.11.2.1
 	netmask 255.255.255.0
-	gateway 10.11.2.1
+	gateway 10.11.2.0
 ```
 #### Eisen
 ```
 auto eth0
 iface eth0 inet static
-	address 10.11.2.3
+	address 10.11.2.2
 	netmask 255.255.255.0
-	gateway 10.11.2.1
+	gateway 10.11.2.0
 ```
 #### Lawine
 ```
 auto eth0
 iface eth0 inet static
-	address 10.11.3.4
+	address 10.11.3.3
 	netmask 255.255.255.0
-	gateway 10.11.3.1
+	gateway 10.11.3.0
 ```
 #### Linie
 ```
 auto eth0
 iface eth0 inet static
-	address 10.11.3.5
+	address 10.11.3.2
 	netmask 255.255.255.0
-	gateway 10.11.3.1
+	gateway 10.11.3.0
 ```
 #### Lugner
 ```
 auto eth0
 iface eth0 inet static
-	address 10.11.3.6
+	address 10.11.3.1
 	netmask 255.255.255.0
-	gateway 10.11.3.1
+	gateway 10.11.3.0
 ```
 #### Frieren
 ```
 auto eth0
 iface eth0 inet static
-	address 10.11.4.4
+	address 10.11.4.3
 	netmask 255.255.255.0
-	gateway 10.11.4.1
+	gateway 10.11.4.0
 ```
 #### Flamme
 ```
 auto eth0
 iface eth0 inet static
-	address 10.11.4.5
+	address 10.11.4.2
 	netmask 255.255.255.0
-	gateway 10.11.4.1
+	gateway 10.11.4.0
 ```
 #### Fern
 ```
 auto eth0
 iface eth0 inet static
-	address 10.11.4.6
+	address 10.11.4.1
 	netmask 255.255.255.0
-	gateway 10.11.4.1
+	gateway 10.11.4.0
 ```
 #### Sein, Stark, Revolte, dan Richter
 ```
@@ -393,7 +393,7 @@ service isc-dhcp-relay start
 ```
 Lalu pada file `/etc/sysctl.conf` lakukan uncommented pada `net.ipv4.ip_forward=1`
 ### Hasil
-
+<img width="398" alt="Cuplikan layar 2023-11-19 204422" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/92ae8733-ad6c-4441-bcfc-3060e39e4ecf">
 
 ## NO 5
 Kita dapat menjalankan command berikut pada DHCP Server
@@ -548,6 +548,9 @@ ab -n 1000 -c 100 http://www.granz.channel.b05.com/
 ### Hasil
 
 
+
+
+
 ## NO 8
 Karena diminta untuk menuliskan grimoire, buatlah analisis hasil testing dengan 200 request dan 10 request/second masing-masing algoritma Load Balancer dengan ketentuan sebagai berikut: 1. Nama Algoritma Load Balancer; 2. Report hasil testing pada Apache Benchmark; 3.Grafik request per second untuk masing masing algoritma.
 
@@ -558,7 +561,23 @@ ab -n 200 -c 10 http://www.granz.channel.b05.com/
 ```
 
 ### Hasil
+#### Round Robin
+<img width="412" alt="Cuplikan layar 2023-11-19 210413" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/63d71a75-bd08-4a16-977d-4287628f54e5">
+<img width="402" alt="Cuplikan layar 2023-11-19 210435" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/53823f09-9a76-4788-a3c6-33d0dbbd6838">
 
+#### Least Cont
+<img width="409" alt="Cuplikan layar 2023-11-19 210512" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/845de39a-f67b-470c-887a-6767eab06dc7">
+<img width="404" alt="Cuplikan layar 2023-11-19 210526" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/39cb3590-2f60-4c65-af20-861fc827fb49">
+
+
+#### IP Hash
+<img width="410" alt="Cuplikan layar 2023-11-19 210547" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/ca191667-e70a-463b-9598-afd5dfac1709">
+<img width="407" alt="Cuplikan layar 2023-11-19 210559" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/88ce2c6a-d373-45af-af59-d7feddb8397b">
+
+
+#### Generic Hash
+<img width="406" alt="Cuplikan layar 2023-11-19 210649" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/2a496e54-6fa8-4a46-b0ee-e6f0a5d8afa6">
+<img width="407" alt="Cuplikan layar 2023-11-19 210704" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/0b6a4229-e1d4-46b6-8c2a-fa4243972841">
 
 ## NO 9
 Dengan menggunakan algoritma Round Robin, lakukan testing dengan menggunakan 3 worker, 2 worker, dan 1 worker sebanyak 100 request dengan 10 request/second, kemudian tambahkan grafiknya pada grimoire.
@@ -571,6 +590,17 @@ ab -n 100 -c 10 http://www.granz.channel.b05.com/
 
 ### Hasil
 
+#### 3 Worker
+<img width="407" alt="Cuplikan layar 2023-11-19 210749" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/4c7e0566-fe24-4895-9d20-8e116ca4d2fe">
+<img width="406" alt="Cuplikan layar 2023-11-19 210800" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/21c03c54-f46e-47da-884e-e914c811254f">
+
+#### 2 Worker
+<img width="400" alt="Cuplikan layar 2023-11-19 211404" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/17ea57c2-3052-4e70-a31e-0f136a80bcc8">
+<img width="406" alt="Cuplikan layar 2023-11-19 211417" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/8f953864-5f4c-424d-a5a9-1bd9cef22616">
+
+#### 1 Worker
+<img width="406" alt="Cuplikan layar 2023-11-19 211439" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/633111d2-3446-433b-910b-38db2edbaff5">
+<img width="405" alt="Cuplikan layar 2023-11-19 211545" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/3fa10590-3298-4053-a496-5d6d73c1c1d2">
 
 ## NO 10
 Selanjutnya coba tambahkan konfigurasi autentikasi di Load Balancer dengan dengan kombinasi username: “netics” dan password: “ajkyyy”, dengan yyy merupakan kode kelompok. Terakhir simpan file “htpasswd” nya di /etc/nginx/rahasisakita/.
@@ -615,6 +645,10 @@ service nginx restart
 ```
 
 ### Hasil
+<img width="409" alt="Cuplikan layar 2023-11-19 211635" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/a0581351-8153-4bd8-af20-e6a5ee25e431">
+<img width="406" alt="Cuplikan layar 2023-11-19 211652" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/c8513144-7f3e-4ba0-a8de-c70d3638e73c">
+<img width="409" alt="Cuplikan layar 2023-11-19 211706" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/848af814-ce0e-490f-bb21-d0e6fe7bd246">
+<img width="409" alt="Cuplikan layar 2023-11-19 211719" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/277b1fa4-55bd-4aef-af4c-259ce9fbaef4">
 
 ## NO 11
 Lalu buat untuk setiap request yang mengandung /its akan di proxy passing menuju halaman https://www.its.ac.id. (11) hint: (proxy_pass).
@@ -670,6 +704,7 @@ lynx www.granz.channel.b05.com/its
 ```
 
 ### Hasil
+<img width="416" alt="Cuplikan layar 2023-11-19 211755" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/751b237a-7f3e-4732-9a3e-0dd3ec0147fe">
 
 
 ## NO 12
@@ -713,9 +748,6 @@ server {
 
 service nginx restart
 ```
-
-### Hasil
-
 
 ## NO 13
 Semua data yang diperlukan, diatur pada Denken dan harus dapat diakses oleh Frieren, Flamme, dan Fern.
@@ -762,7 +794,12 @@ FLUSH PRIVILEGES;
 ```
 
 ### Hasil
+#### Denken
+<img width="409" alt="Cuplikan layar 2023-11-19 211901" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/5c2047cf-5f43-414b-8740-f37f05abd0c6">
+<img width="409" alt="Cuplikan layar 2023-11-19 211936" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/b0dc18da-3e76-4013-bd5c-0424f5d91e8e">
 
+#### Fern
+<img width="408" alt="Cuplikan layar 2023-11-19 212043" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/d6179e74-ddfc-44e6-89a9-7c9f85f4d940">
 
 ## NO 14
 Frieren, Flamme, dan Fern memiliki Granz Channel sesuai dengan quest guide berikut. Jangan lupa melakukan instalasi PHP8.0 dan Composer.
@@ -883,7 +920,7 @@ chown -R www-data.www-data /var/www/laravel-praktikum-jarkom/storage
 service php8.0-fpm restart
 service nginx restart
 ```
-Lakukan konfigurasi `nginx` sebagai berikut pada masing-masing worker dimana port nya adalah sebagai berikut
+Lakukan konfigurasi `nginx` sebagai berikut pada masing-masing worker dan sesuaikan portnya
 ```
 10.11.4.1:8001; # Fern 
 10.11.4.2:8002; # Flamme
@@ -923,7 +960,7 @@ lynx localhost:[PORT]
 ```
 
 ### Hasil
-
+<img width="410" alt="Cuplikan layar 2023-11-19 212116" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/08097069-de15-4c00-af9c-e8365262ae4d">
 
 ## NO 15
 Granz Channel memiliki beberapa endpoint yang harus ditesting sebanyak 100 request dengan 10 request/second. Tambahkan response dan hasil testing pada grimoire. Untuk POST /api/auth/register.
@@ -944,7 +981,8 @@ ab -n 100 -c 10 -T 'application/json' -p register_data.json -g register_results2
 ```
 
 ### Hasil
-
+<img width="341" alt="Cuplikan layar 2023-11-19 212216" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/0539a8df-d0e4-4380-8813-63ddcb9a3f6d">
+<img width="339" alt="Cuplikan layar 2023-11-19 212227" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/e34fa82f-532b-4982-813d-654bd43d9e2b">
 
 ## NO 16
 Granz Channel memiliki beberapa endpoint yang harus ditesting sebanyak 100 request dengan 10 request/second. Tambahkan response dan hasil testing pada grimoire. Untuk POST /api/auth/login.
@@ -966,7 +1004,7 @@ ab -n 100 -c 10 -T 'application/json' -p register_data.json -g register_results2
 ```
 
 ### Hasil
-
+<img width="340" alt="Cuplikan layar 2023-11-19 212247" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/8a5e3240-9888-417f-83c7-04d53bb1d678">
 
 ## NO 17
 Granz Channel memiliki beberapa endpoint yang harus ditesting sebanyak 100 request dengan 10 request/second. Tambahkan response dan hasil testing pada grimoire. Untuk GET /api/me.
@@ -988,7 +1026,9 @@ ab -n 100 -c 10 -H "Authorization: Bearer $token" http://10.11.4.1:8001/api/me
 ```
 
 ### Hasil
-
+<img width="339" alt="Cuplikan layar 2023-11-19 212310" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/7493ca84-7db6-4037-8354-8005118d06e9">
+<img width="397" alt="Cuplikan layar 2023-11-19 212339" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/7dc7e71d-7987-4cbe-9673-b1eb27859b9d">
+<img width="409" alt="Cuplikan layar 2023-11-19 212354" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/b52dd710-ceca-4100-9ee1-546a1ce0aab1">
 
 ## NO 18
 Untuk memastikan ketiganya bekerja sama secara adil untuk mengatur Granz Channel maka implementasikan Proxy Bind pada Eisen untuk mengaitkan IP dari Frieren, Flamme, dan Fern.
@@ -1024,4 +1064,123 @@ ab -n 100 -c 10 -p login_data.json -T application/json http://www.riegel.canyon.
 ```
 
 ### Hasil
+<img width="339" alt="Cuplikan layar 2023-11-19 212432" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/d3f257ab-3a61-4652-af19-71c4a4a3e375">
 
+## NO 19
+Untuk meningkatkan performa dari Worker, coba implementasikan PHP-FPM pada Frieren, Flamme, dan Fern. Untuk testing kinerja naikkan -> pm.max_children, pm.start_servers, pm.min_spare_servers, pm.max_spare_servers sebanyak tiga percobaan dan lakukan testing sebanyak 100 request dengan 10 request/second kemudian berikan hasil analisisnya pada Grimoire.
+
+Terdapat 4 konfigurasi pada `package manager` untuk tiap `worker`
+
+### Script
+#### 1
+```
+# Setup Awal
+echo '[www]
+user = www-data
+group = www-data
+listen = /run/php/php8.0-fpm.sock
+listen.owner = www-data
+listen.group = www-data
+php_admin_value[disable_functions] = exec,passthru,shell_exec,system
+php_admin_flag[allow_url_fopen] = off
+
+; Choose how the process manager will control the number of child processes.
+
+pm = dynamic
+pm.max_children = 5
+pm.start_servers = 2
+pm.min_spare_servers = 1
+pm.max_spare_servers = 3' > /etc/php/8.0/fpm/pool.d/www.conf
+
+service php8.0-fpm restart
+```
+#### 2
+```
+echo '[www]
+user = www-data
+group = www-data
+listen = /run/php/php8.0-fpm.sock
+listen.owner = www-data
+listen.group = www-data
+php_admin_value[disable_functions] = exec,passthru,shell_exec,system
+php_admin_flag[allow_url_fopen] = off
+
+; Choose how the process manager will control the number of child processes.
+
+pm = dynamic
+pm.max_children = 25
+pm.start_servers = 5
+pm.min_spare_servers = 3
+pm.max_spare_servers = 10' > /etc/php/8.0/fpm/pool.d/www.conf
+
+service php8.0-fpm restart
+```
+#### 3
+```
+echo '[www]
+user = www-data
+group = www-data
+listen = /run/php/php8.0-fpm.sock
+listen.owner = www-data
+listen.group = www-data
+php_admin_value[disable_functions] = exec,passthru,shell_exec,system
+php_admin_flag[allow_url_fopen] = off
+
+; Choose how the process manager will control the number of child processes.
+
+pm = dynamic
+pm.max_children = 50
+pm.start_servers = 8
+pm.min_spare_servers = 5
+pm.max_spare_servers = 15' > /etc/php/8.0/fpm/pool.d/www.conf
+
+service php8.0-fpm restart
+```
+#### 4
+```
+echo '[www]
+user = www-data
+group = www-data
+listen = /run/php/php8.0-fpm.sock
+listen.owner = www-data
+listen.group = www-data
+php_admin_value[disable_functions] = exec,passthru,shell_exec,system
+php_admin_flag[allow_url_fopen] = off
+
+; Choose how the process manager will control the number of child processes.
+
+pm = dynamic
+pm.max_children = 75
+pm.start_servers = 10
+pm.min_spare_servers = 5
+pm.max_spare_servers = 20' > /etc/php/8.0/fpm/pool.d/www.conf
+
+service php8.0-fpm restart
+```
+
+## NO 20
+Nampaknya hanya menggunakan PHP-FPM tidak cukup untuk meningkatkan performa dari worker maka implementasikan Least-Conn pada Eisen. Untuk testing kinerja dari worker tersebut dilakukan sebanyak 100 request dengan 10 request/second. 
+
+Karena konfigurasi sebelumnya pada setiap `worker`, khususnya pada `package manager`, tidak memberikan hasil yang memadai untuk meningkatkan kinerja `worker`, maka ditambahkan algoritma pada `load balancer` menggunakan metode `Least-connection`. Algoritma ini memberikan prioritas kepada node dengan beban kinerja paling rendah. Node master secara akurat mencatat beban dan kinerja dari setiap node, kemudian memberikan prioritas kepada yang memiliki beban terendah. Dengan demikian, diharapkan tidak ada server yang memiliki beban kinerja yang rendah.
+
+### Script
+```
+echo 'upstream worker {
+    least_conn;
+    server 10.11.4.1:8001;
+    server 10.11.4.2:8002;
+    server 10.11.4.3:8003;
+}
+
+server {
+    listen 80;
+    server_name riegel.canyon.a09.com www.riegel.canyon.a09.com;
+
+    location / {
+        proxy_pass http://worker;
+    }
+} 
+' > /etc/nginx/sites-available/laravel-worker
+
+service nginx restart
+```
