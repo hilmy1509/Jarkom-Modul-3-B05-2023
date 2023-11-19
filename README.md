@@ -281,7 +281,8 @@ echo 'options {
 service bind9 start
 ```
 ## Hasil
-<img width="501" alt="Cuplikan layar 2023-11-16 164325" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/bea8961c-4ef7-4ab7-99c7-0d65da1c18c8">
+<img width="501" alt="Cuplikan layar 2023-11-16 182749" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/95b7a120-28fd-4f76-8fb4-3968cb4cd027">
+
 
 ## NO 2
 Semua CLIENT harus menggunakan konfigurasi dari DHCP Server. Client yang melalui Switch3 mendapatkan range IP dari [prefix IP].3.16 - [prefix IP].3.32 dan [prefix IP].3.64 - [prefix IP].3.80
