@@ -434,6 +434,8 @@ subnet 10.11.4.0 netmask 255.255.255.0 {
 service isc-dhcp-server restart
 ```
 ### Hasil
+<img width="428" alt="Cuplikan layar 2023-11-19 193140" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/cb866b14-7eff-4970-93c8-bcee266ebef5">
+<img width="434" alt="Cuplikan layar 2023-11-19 193212" src="https://github.com/hilmy1509/Jarkom-Modul-3-B05-2023/assets/115638253/90c53639-bec5-4070-9c28-9572715c037a">
 
 ## NO 6
 Untuk melakukan konfigurasi tambahan sebagai berikut untuk melakukan download dan unzip menggunakan command `wget`
